@@ -56,7 +56,9 @@ C
             cn = 2. * sqrt( abs(kn * mass))
             ct2 = 2. * sqrt( abs(ks * mass))
          else
-            fwt(iq,jq) = sign(fricf,fwt(iq,jq))
+C	    fwt(iq,jq) = sign(fricf,fwt(iq,jq))
+C Argument a, b のタイプを揃えるため、intを導入した。
+            fwt(iq,jq) = sign(int(fricf),int(fwt(iq,jq)))
             bt = fwt(iq,jq)
             cn = 2. * sqrt( abs(kn * mass))
             ct2 = 0.
