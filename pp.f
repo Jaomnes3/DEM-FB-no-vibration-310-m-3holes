@@ -2,16 +2,20 @@
 C
       include 'demA.h'
 C
-      integer tnojq
+C Defining tno as an integer in response to errors.
+      integer tnojq, tno
 C
       real   dx, xc, enx, etx, dvx, fpx,
      &         dy, yc, eny, ety, dvy, fpy,
      &         d,      dvn, fpn, dpn, 
      &         bdt,    dvt, fpt, dpt,
      &         bt, cn, ct2, bn
+C Defining fricf as a real*8.
+      real*8   fricf
 C
       do 10 tno = 1,tnomax
          if ( ftbl(iq,tno). eq .jq ) goto 11
+
  10   continue
 C
       do 20 tno = 1,tnomax
