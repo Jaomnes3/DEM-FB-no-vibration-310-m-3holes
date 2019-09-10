@@ -29,3 +29,12 @@ In file ./pw.f:59
 Error: 'b' argument of 'sign' intrinsic at (1) must be the same type and kind as 'a'
    ⇒Solved by converting arguments a,b into integers using the "int" function.
  
+9/10/19
+◎Modifications to pp.f
+ ・Declared "tno" as an integer at pp.f:6.
+ ・Declared "fricf" as a real*8 at pp.f:14.
+
+◎General
+ ・All programs were compiled in g95(-freal-loops) without error, and a.exe was created.
+ ・By running a.exe, fort.60 and fort.9 were created; the latter of which noted the necessity of an "airinfile.dat".
+     →Simulation initially references a missing "airinfile.dat" for necessary data, and will likely output data in the form of "airfile.dat". 
