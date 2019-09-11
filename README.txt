@@ -43,3 +43,8 @@ Error: 'b' argument of 'sign' intrinsic at (1) must be the same type and kind as
  ・All programs were compiled in g95(-freal-loops) without error, and a.exe was created.
  ・By running a.exe, fort.60 and fort.9 were created; the latter of which noted the necessity of an "airinfile.dat".
      →Simulation initially references a missing "airinfile.dat" for necessary data, and will likely output data in the form of "airfile.dat". 
+
+9/11/19
+◎For mainpro.f
+・The boolean switch "SW01 = 1.0" was changed to "SW01 = 0.0".
+・Declared "CHANGE" as an integer.

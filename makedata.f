@@ -6,7 +6,8 @@ C
      &     XP(300000), YP(300000), RANSU(2700000),
      &     LENGX, LENGY
 C
-      INTEGER PXM, PYM, OS, COUNT
+
+      INTEGER PXM, PYM, OS, COUNT, CHANGE 
 C     
       OPEN ( 1, ERR = 9900,STATUS = 'OLD',FILE ='infile.dat')
       CLOSE( 1, STATUS = 'DELETE' )

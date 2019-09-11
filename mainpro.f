@@ -58,7 +58,7 @@ C
 C *** SW01 = 0.0 ----- DO NOT READ AIR DATAFILE ***
 C *** OTHERS     ----- READ READ AIR DATAFILE   ***
 C
-      SW01 = 1.0
+      SW01 = 0.0
 C
 C *** CYCLE of DATA OUTPUT ***
 C
@@ -151,7 +151,7 @@ C       VORZ(I,J) = 0.0
 C
 C *** READ PARTICLE DATAFILE ("infile.dat") ***
 C
-C        CALL PRE
+        CALL PRE
 C
       dt = DELT*SL0/SU0
 C
@@ -818,7 +818,7 @@ C
 C
 C      de=delt*SL0/SU0
 C
-C      CALL PARTITION
+      CALL PARTITION
 C
       dpp=DP*SL0
 C
@@ -914,9 +914,9 @@ C 6705 m(iq)  = 0.5*CMp*(dpp/2.0)**5*arho*abs(omgpp)*omgpp
 C
    20 continue
 C
-C      CALL CALCULATION
+      CALL CALCULATION
 C
-C      CALL MOVEP
+      CALL MOVEP
 C
 C *** CALCULATION of VOID FRACTION ***
 C
@@ -1157,7 +1157,7 @@ C
 C *** OUTPUT DATAFILE ("airfile0*.dat" and "file0*.dat") ***
 C
       IF(MOD(CYCLE,NCYCLE00).LT.1) THEN
-C        CALL POST00
+        CALL POST00
       open( unit = 1, err = 9012, status='old',
      &file = 'airfile00.dat' )
       close( unit = 1, status = 'delete')
@@ -1185,7 +1185,7 @@ C
 C *******************************
 C
       IF(MOD(CYCLE,NCYCLE01).LT.1) THEN
-C        CALL POST01
+        CALL POST01
       open( unit = 1, err = 8992, status='old',
      &file = 'airfile01.dat' )
       close( unit = 1, status = 'delete')
@@ -1213,7 +1213,7 @@ C
 C *******************************
 C
       IF(MOD(CYCLE,NCYCLE02).LT.1) THEN
-C        CALL POST02
+        CALL POST02
       open( unit = 1, err = 9015, status='old',
      &file = 'airfile02.dat' )
       close( unit = 1, status = 'delete')
@@ -1241,7 +1241,7 @@ C
 C *******************************
 C
       IF(MOD(CYCLE,NCYCLE03).LT.1) THEN
-C        CALL POST03
+        CALL POST03
       open( unit = 1, err = 9016, status='old',
      &file = 'airfile03.dat' )
       close( unit = 1, status = 'delete')
@@ -1269,7 +1269,7 @@ C
 C *******************************
 C
       IF(MOD(CYCLE,NCYCLE04).LT.1) THEN
-C        CALL POST04
+        CALL POST04
       open( unit = 1, err = 9017, status='old',
      &file = 'airfile04.dat' )
       close( unit = 1, status = 'delete')
@@ -1297,7 +1297,7 @@ C
 C *******************************
 C
       IF(MOD(CYCLE,NCYCLE05).LT.1) THEN
-C        CALL POST05
+        CALL POST05
       open( unit = 1, err = 9018, status='old',
      &file = 'airfile05.dat' )
       close( unit = 1, status = 'delete')
@@ -1325,7 +1325,7 @@ C
 C *******************************
 C
       IF(MOD(CYCLE,NCYCLE06).LT.1) THEN
-C        CALL POST06
+        CALL POST06
       open( unit = 1, err = 9128, status='old',
      &file = 'airfile06.dat' )
       close( unit = 1, status = 'delete')
@@ -1353,7 +1353,7 @@ C
 C *******************************
 C
       IF(MOD(CYCLE,NCYCLE07).LT.1) THEN
-C        CALL POST07
+        CALL POST07
       open( unit = 1, err = 9069, status='old',
      &file = 'airfile07.dat' )
       close( unit = 1, status = 'delete')
@@ -1381,7 +1381,7 @@ C
 C *******************************
 C
       IF(MOD(CYCLE,NCYCLE08).LT.1) THEN
-C        CALL POST08
+        CALL POST08
       open( unit = 1, err = 9059, status='old',
      &file = 'airfile08.dat' )
       close( unit = 1, status = 'delete')
@@ -1409,7 +1409,7 @@ C
 C *******************************
 C
       IF(MOD(CYCLE,NCYCLE09).LT.1) THEN
-C        CALL POST09
+        CALL POST09
       open( unit = 1, err = 9049, status='old',
      &file = 'airfile09.dat' )
       close( unit = 1, status = 'delete')
